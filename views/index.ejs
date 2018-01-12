@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Animals</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Animals:</h1>
+        <table>
+            <tr>
+                <th>Id:</th>
+                <th>Animal Name:</th>
+                <th>Description:</th>
+                <th>Actions:</th>
+            </tr>
+            <% for(x in animals){%>
+                <tr>
+                    <td>
+                        <%=animals[x]._id%>
+                    </td>
+                    <td>
+                        <a href="mongoose/show/<%=animals[x]._id%>">
+                            <%=animals[x].animalName%>
+                        </a>
+                    </td>
+                    <td>
+                        <%=animals[x].description%>
+                    </td>
+                    <td><a href="mongoose/show/<%=animals[x]._id%>">Show Info</a>
+                        <a href="mongoose/update/<%=animals[x]._id%>">Edit</a>
+                        <a href="mongoose/destroy/<%=animals[x]._id%>">Delete</a></td>
+                </tr>
+                <%}%>
+        </table>
+        <p><a href="mongoose/new">Add a new animal</a></p>
+    </div>
+</body>
+
+</html>
+
+
+<style>
+    #wrapper {
+        width: 500px;
+        height: 700px;
+        margin: 50px auto;
+        background: lightblue;
+        border: 2px solid black;
+        text-align: center;
+    }
+    
+    th {
+        border: 1px solid black;
+    }
+    
+    td {
+        border: 1px solid black;
+    }
+    
+    table {
+        margin-top: 30px;
+    }
+</style>

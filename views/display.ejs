@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Animal
+    </title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Animal:
+            <%=animal._id%>
+        </h1>
+        <p>Animal Name:
+            <%=animal.animalName%>
+        </p>
+        <p>Animal Description:
+            <%= animal.description %>
+        </p>
+        <p>Created at:
+            <%=animal.createdAt%>
+        </p>
+        <br>
+        <a href="/mongoose/update/<%=animal._id%>">Edit</a> <a href="/mongoose/destroy/<%=animal._id%>">Delete</a>
+    </div>
+
+</body>
+
+</html>
+
+
+<style>
+    #wrapper {
+        width: 500px;
+        height: 700px;
+        margin: 50px auto;
+        background: lightblue;
+        border: 2px solid black;
+        text-align: left;
+    }
+    
+    h1 {
+        margin-top: 200px;
+        margin-left: 30px;
+    }
+    
+    p {
+        margin-left: 30px;
+    }
+    
+    a {
+        margin-left: 30px;
+    }
+</style>

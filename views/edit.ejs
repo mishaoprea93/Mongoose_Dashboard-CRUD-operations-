@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit user</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <h1>Update user
+            <%=animal._id%> info:</h1>
+        <form method="POST" action="/mongoose/update/process/<%=animal._id%>">
+            <p>Animal Name: <input type="text" name="animalName" value="<%=animal.animalName%>"></p>
+            <p>Description: <input type="text" name="description" value="<%=animal.description%>"></p>
+
+            <p><input type="submit" value="Update"></p>
+        </form>
+        <br>
+        <a href="/mongoose/show/<%=animal._id%>">Show</a> <a href="/mongoose/delete/<%=animal._id%>">Delete</a>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    #wrapper {
+        width: 500px;
+        height: 700px;
+        margin: 50px auto;
+        background: lightblue;
+        border: 2px solid black;
+        text-align: left;
+    }
+    
+    p {
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+    
+    h1 {
+        margin-left: 30px;
+        margin-top: 170px;
+    }
+    
+    a {
+        margin-left: 20px;
+    }
+</style>
